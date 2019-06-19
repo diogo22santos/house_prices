@@ -1,2 +1,14 @@
 # Ignore virtual environment folder
 venv/
+
+# datafiles	# datafiles
+train.csv	train.csv
+test.csv
+
+# pycharm
+.idea/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
