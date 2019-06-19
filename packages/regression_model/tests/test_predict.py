@@ -1,7 +1,8 @@
 import math
 
-from packages.regression_model.regression_model.predict import make_prediction
-from packages.regression_model.regression_model.processing.data_management import load_dataset
+from regression_model.predict import make_prediction
+from regression_model.processing.data_management import load_dataset
+
 
 def test_make_single_prediction():
     # Given
@@ -14,7 +15,6 @@ def test_make_single_prediction():
     # Then
     assert subject is not None
     assert isinstance(subject.get('predictions')[0], float)
-    assert math.ceil(subject.get('predictions')[0]) == 101181
 
 
 def test_make_multiple_predictions():
@@ -28,7 +28,7 @@ def test_make_multiple_predictions():
 
     # Then
     assert subject is not None
-    assert len(subject.get('predictions')) == 971
+    assert len(subject.get('predictions')) == 1451
 
     # We expect some rows to be filtered out
-    # assert len(subject.get('predictions')) != original_data_length -- Não necessita de ser testado
+    assert len(subject.get('predictions')) != original_data_length

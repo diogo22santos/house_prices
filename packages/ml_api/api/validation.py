@@ -15,6 +15,7 @@ SYNTAX_ERROR_FIELD_MAP = {
     '3SsnPorch': 'ThreeSsnPortch'
 }
 
+
 class HouseDataRequestSchema(Schema):
     Alley = fields.Str(allow_none=True)
     BedroomAbvGr = fields.Integer()
@@ -96,6 +97,7 @@ class HouseDataRequestSchema(Schema):
     FirstFlrSF = fields.Integer()
     SecondFlrSF = fields.Integer()
     ThreeSsnPortch = fields.Integer()
+
 
 def _filter_error_rows(errors: dict,
                        validated_input: t.List[dict]

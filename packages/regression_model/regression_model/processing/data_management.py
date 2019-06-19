@@ -2,8 +2,8 @@ import pandas as pd
 from sklearn.externals import joblib
 from sklearn.pipeline import Pipeline
 
-from packages.regression_model.regression_model.config import config
-from packages.regression_model.regression_model import __version__ as _version
+from regression_model.config import config
+from regression_model import __version__ as _version
 
 import logging
 
